@@ -1,10 +1,19 @@
+html {
+    touch-action: manipulation;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
 .square {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid #d6d6d6;
-    width: 75px;
-    height: 75px;
+    width: 8vh;
+    height: 8vh;
     font-size: xx-large;
     text-align: center;
 }
@@ -38,4 +47,15 @@ header div {
 }
 header div h4 {
     padding-right: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .square {
+        width: 8vw;
+        height: 8vw;
+        font-size: large;
+    }
+    header div h4 {
+        padding-right: 5px;
+    }
 }

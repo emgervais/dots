@@ -19,19 +19,15 @@ initGame();
 document.addEventListener('click', handleMove);
 });
 function isDone() {
-    let first = 0;
-    let second = 0;
     for (let x = 0; x < 11; x++) {
         for (let y = 0; y < 11; y++) {
             if(board[x][y]) {
                 if (board[x][y].player === null)
                     return;
-                board[x][y].player ? second++ : first++;
             }
         }
     }
-    alert("Player 1: " + first + " Player 2: " + second);
-    initGame();
+    alert("player " + (player1 > player2 ? "X" : "Y") + " wins!");
 }
 function checkSquare(x, y, turn) {
     if (board[x][y].top && board[x][y].bottom && board[x][y].left && board[x][y].right && board[x][y].player === null) {
