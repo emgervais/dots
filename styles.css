@@ -1,0 +1,25 @@
+.square {
+    border: 1px solid #858585;
+    width: 75px;
+    height: 75px;
+}
+.left {
+    border-left: black 2px solid;
+}
+.right {
+    border-right: black 2px solid;
+}
+.top {
+    border-top: black 2px solid;
+}
+.bottom {
+    border-bottom: black 2px solid;
+}
+.line {
+    display: flex;
+    justify-content: center;
+}
+#board {
+    display: flex;
+    flex-direction: column;
+}
